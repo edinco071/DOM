@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <title>Assignment 2 - Website Building</title>
+        <style>
+            body {
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            #login-form {
+                width: 360px;
+                margin: 0 auto;
+            }
+
+            form label,
+            form input {
+                width: 80%;
+            }
+
+            .form-grp .fa {
+                top: 50%;
+                right: 8%;  
+            }
+
+        
+            form input {
+                padding: 8px;
+            }
+
+            form label {
+                font-weight: bold;  
+            }
+
+            form div {
+                margin: 18px 0px;
+            }
+
+            .err-pass {
+                display:none;
+            }
+
+            .err-usr {
+                display: none;
+            }
+            .nav{
+
+                font-size: large;
+                text-align: center;
+                display: none;
+            }
+
+            .fa-times {
+                color: red;
+                position: relative;
+                display: none;
+            }
+
+            .fa-check {
+                color: green;
+                position: relative;
+                display: none;
+            }
+
+            .input-field {
+                width: 80%;
+                padding: 10px;
+                outline: none; 
+            }
+
+            
+
+        </style>
+    </head>
+
+    <body>
+
+        <div id="login-form">
+            
+
+            <form>
+                <div class="form-grp">
+                    <label for="username">Username:</label>
+                    <input class="input-field" id="username" type="text">
+                    <i class="fa fa-times p_times" style="color:red ;"></i>
+                    <i class="fa fa-check p_check" style="color:green ;"  ></i>
+                </div>
+
+                <div class="form-grp">
+                    <label for="password">Password:</label>
+                    <input class="input-field" id="password" type="password">
+                    <i class="fa fa-times p_times" style="color:red ;" ></i>
+                    <i class="fa fa-check p_check" style="color:green ;"></i>
+                </div>
+
+                <input id="login-btn" type="submit" value="Login" onclick="login()">
+                <p class="err-usr">please, enter valid username</p>
+                <p class="err-pass">please, enter valid password</p>
+                <p class="nav">Sucessuful login</p>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
